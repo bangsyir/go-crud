@@ -1,10 +1,18 @@
 package main
 
-// func init() {
-// 	initializers.LoadEnvVariable()
-// 	initializers.ConnectToDB()
-// }
+import (
+	"github.com/bangsyir/go-crud/initializers"
+	"github.com/bangsyir/go-crud/models"
+)
 
-// func main() {
-// 	initializers.DB.AutoMigrate(&models.Post{})
-// }
+func init() {
+	initializers.LoadEnvVariable()
+	initializers.ConnectToDB()
+}
+
+func main() {
+	initializers.DB.AutoMigrate(&models.Post{})
+}
+
+// open terminal in this path and run :
+// go run migrate/migrate

@@ -1,7 +1,6 @@
 package initializers
 
 import (
-	"github.com/bangsyir/go-crud/models"
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
 )
@@ -14,5 +13,5 @@ func ConnectToDB() {
 	if err != nil {
 		panic("failed to connect database")
 	}
-	DB.AutoMigrate(&models.Post{})
+	// DB.AutoMigrate(&models.Post{})
 }
